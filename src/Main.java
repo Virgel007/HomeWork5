@@ -11,14 +11,14 @@ public class Main {
 //
 //        }
 
-        task1();
-        task2();
-        task3();
-        task4();
+//        task1();
+//        task2();
+//        task3();
+//        task4();
 //        task5();
 //        task6();
-//        task7();
-//        task8();
+        fillAndPrint2DMatrix( 4, 4); // если 4х4=16 выводит
+        fillAndPrint2DMatrix(7,7); // если 7х7=49 выводит
 //        task9();
 //        task10();
 
@@ -108,6 +108,45 @@ public class Main {
         System.out.println();
         for (int i = reverseFullName.length - 1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
+        }
+    }
+
+    public static void task5() {
+        int[][] doubleArray = new int[3][3];
+        for (int i = 0; i < doubleArray.length; i++) {
+            for (int j = 0; j < doubleArray[i].length; j++) {
+                doubleArray[i][j] = 1;
+                System.out.print(doubleArray[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void task6() {
+        int[][] doubleArray = new int[3][3];
+
+        int value = 1;
+        for (int i = 0; i < doubleArray.length; i++) {
+            for (int j = 0; j < doubleArray[i].length; j++) {
+                doubleArray[i][j] = value;
+                value++;
+                System.out.print(doubleArray[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void fillAndPrint2DMatrix(int m, int n) {
+        int[][] doubleArray = new int[m][n];
+
+        int value = 1;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                doubleArray[i][j] = value;
+                value++;
+                System.out.print(doubleArray[i][j] + " ");
+            }
+            System.out.println();
         }
     }
 }
